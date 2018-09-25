@@ -1,0 +1,212 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "3587ae9ea9bec4269b399dc7055e30d3ce2ce3c2"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "RomanNumeralsKata/1.0.0": {
+        "dependencies": {
+          "NCrunch.Framework": "3.17.0",
+          "NFluent": "2.3.1"
+        },
+        "runtime": {
+          "RomanNumeralsKata.dll": {}
+        }
+      },
+      "NCrunch.Framework/3.17.0": {
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/NCrunch.Framework.dll": {
+            "assemblyVersion": "3.17.0.0",
+            "fileVersion": "3.17.0.0"
+          }
+        }
+      },
+      "NFluent/2.3.1": {
+        "runtime": {
+          "lib/netstandard2.0/NFluent.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "System.Collections.NonGeneric/4.3.0": {
+        "dependencies": {
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        }
+      },
+      "System.Diagnostics.Debug/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Globalization/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.IO/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Primitives/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Resources.ResourceManager/4.3.0": {
+        "dependencies": {
+          "System.Globalization": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Runtime/4.3.0": {},
+      "System.Runtime.Extensions/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Text.Encoding/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Threading/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RomanNumeralsKata/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NCrunch.Framework/3.17.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-anNj3zhQQqDg5EmGpzPMBndkZCLMMf3S/rjqQzUqzmXF9SDlwvKBOXF+onsFLhVob8j5z4js8YipwLijJTl+JQ==",
+      "path": "ncrunch.framework/3.17.0",
+      "hashPath": "ncrunch.framework.3.17.0.nupkg.sha512"
+    },
+    "NFluent/2.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qSLlAB0ofjm3UjZ2Lgthv/l/kT3KRERLxbdG9pUobttaAga6ey+y138yKTzEObmXT4kjQ1WVroHZX9YZuRLZSw==",
+      "path": "nfluent/2.3.1",
+      "hashPath": "nfluent.2.3.1.nupkg.sha512"
+    },
+    "System.Collections.NonGeneric/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
+      "path": "system.collections.nongeneric/4.3.0",
+      "hashPath": "system.collections.nongeneric.4.3.0.nupkg.sha512"
+    },
+    "System.Diagnostics.Debug/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RNsQ06tBXC+/+TwZOYtfpwyDP9xcHmD1w0uV2qle8ugD5C0j+z+hJCb6hRWNkbmreASYvmOYKj3U8KFvoz6+LQ==",
+      "path": "system.diagnostics.debug/4.3.0",
+      "hashPath": "system.diagnostics.debug.4.3.0.nupkg.sha512"
+    },
+    "System.Globalization/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G96Y3eVlxHU5UHfYXwgPkdFzWZYcWDQjRke+nyhxK4GuFANP6acwmlbp4i0sq/g47uOz3pI7D0xzpoS8BU/p2w==",
+      "path": "system.globalization/4.3.0",
+      "hashPath": "system.globalization.4.3.0.nupkg.sha512"
+    },
+    "System.IO/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c8ZWmyO5SWRr4HpB7/fWco6BPdi6LMG+ywHCEvLAjjcX9wTkJLM8ZTNI7pF8sKAbEfrQBfq71jeeegzMn6m6SQ==",
+      "path": "system.io/4.3.0",
+      "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TJ5DXhe9R1v2PGbfd1m91RDyffO8x6NglW6xWGF1+ScTxMv6jXfRe+U7fcSjpWVkanTB1eVqBHqq+0ClXwU0Xg==",
+      "path": "system.reflection/4.3.0",
+      "hashPath": "system.reflection.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z9iURQM08ltUjEMXxw/s2O+7jzPOchQa4/GjpXcAwGWGGuINWPeTl7YRoszxaNbzRyDXyFS2xtcmA8c0sfmwOA==",
+      "path": "system.reflection.primitives/4.3.0",
+      "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Resources.ResourceManager/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qj51uy3/2y6DOCPEFNBMz3Q5N3RtmQLtCr+jHMRHgbYVZAbxvARcoUh45w84VL0kI/IwWz+rK62yfYXIIomd4Q==",
+      "path": "system.resources.resourcemanager/4.3.0",
+      "hashPath": "system.resources.resourcemanager.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m+uyG26lcKzdHMuqjdXMIpLMcoL+H66cdEwP+JtZQ8PdNthRqKItjXjiZkCjDYps7b1foOi0/0JS84phqqy/aA==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.Extensions/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4vrGVP5mpcAePu1msO3KVJgyHz2s7OCFWewNuE0pIEaZMg181w9ygA9IWRpKPn8pB44UqXmP+k2ag0QVox+yzQ==",
+      "path": "system.runtime.extensions/4.3.0",
+      "hashPath": "system.runtime.extensions.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encoding/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CbHPvORu3GAl4GlZz3V5z06eKOWJ50L5xejskeeoRs4jKTWxwz5alUAq4FomNrfSOae5Fbf2dQK1bN345vwdTw==",
+      "path": "system.text.encoding/4.3.0",
+      "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Threading/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zOpVVV1yqt8lPLvjz6UwxEbsSHm12RsPnkYOq0askyGP0bwyXYUXtGUDoNPQ6bP7rjik7fMzlC6Eg+NWjMGpNg==",
+      "path": "system.threading/4.3.0",
+      "hashPath": "system.threading.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FTAdlrI6rkeXI/nYKeybRKBP0DSnKEqcmVAeZOWGu8SpICxvQxQC2WdZQdc/OE8oRRlDW+JafTH+rwcOdAYZdg==",
+      "path": "system.threading.tasks/4.3.0",
+      "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\RomanNumeralsKata\bin\Debug\netcoreapp2.1\RomanNumeralsKata.deps.json
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\RomanNumeralsKata\bin\Debug\netcoreapp2.1\RomanNumeralsKata.dll
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\RomanNumeralsKata\obj\Debug\netcoreapp2.1\RomanNumeralsKata.csprojAssemblyReference.cache
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\RomanNumeralsKata\obj\Debug\netcoreapp2.1\RomanNumeralsKata.csproj.CoreCompileInputs.cache
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\RomanNumeralsKata\obj\Debug\netcoreapp2.1\RomanNumeralsKata.AssemblyInfoInputs.cache
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\RomanNumeralsKata\obj\Debug\netcoreapp2.1\RomanNumeralsKata.AssemblyInfo.cs
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\RomanNumeralsKata\bin\Debug\netcoreapp2.1\RomanNumeralsKata.pdb
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\RomanNumeralsKata\obj\Debug\netcoreapp2.1\RomanNumeralsKata.dll
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\RomanNumeralsKata\obj\Debug\netcoreapp2.1\RomanNumeralsKata.pdb

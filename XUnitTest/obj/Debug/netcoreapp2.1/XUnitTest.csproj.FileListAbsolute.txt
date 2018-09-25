@@ -1,0 +1,14 @@
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\bin\Debug\netcoreapp2.1\XUnitTest.deps.json
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\bin\Debug\netcoreapp2.1\XUnitTest.runtimeconfig.json
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\bin\Debug\netcoreapp2.1\XUnitTest.runtimeconfig.dev.json
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\bin\Debug\netcoreapp2.1\XUnitTest.dll
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\obj\Debug\netcoreapp2.1\XUnitTest.csprojAssemblyReference.cache
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\obj\Debug\netcoreapp2.1\XUnitTest.csproj.CoreCompileInputs.cache
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\obj\Debug\netcoreapp2.1\XUnitTest.AssemblyInfoInputs.cache
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\obj\Debug\netcoreapp2.1\XUnitTest.AssemblyInfo.cs
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\bin\Debug\netcoreapp2.1\XUnitTest.pdb
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\obj\Debug\netcoreapp2.1\XUnitTest.dll
+C:\Users\lenovo_2\Documents\Kata_promo_6\RomanNumeralsKata\XUnitTest\obj\Debug\netcoreapp2.1\XUnitTest.pdb
