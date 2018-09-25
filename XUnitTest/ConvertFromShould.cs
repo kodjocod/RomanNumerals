@@ -37,5 +37,36 @@ namespace RomanNumeralKataUnitTest
             Check.That(convertedNumber).IsEqualTo("III");
         }
 
+        [Fact]
+        public void return_IV_when_the_arabic_number_is_4()
+        {
+            int arabicNumeral = 4;
+            RomanNumeral romanNumeral = new RomanNumeral();
+
+            string convertedNumber = romanNumeral.ConvertFrom(arabicNumeral);
+
+            Check.That(convertedNumber).IsEqualTo("IV");
+        }
+        [Fact]
+        public void return_V_when_the_arabic_number_is_5()
+        {
+            int arabicNumeral = 5;
+            RomanNumeral romanNumeral = new RomanNumeral();
+
+            string convertedNumber = romanNumeral.ConvertFrom(arabicNumeral);
+
+            Check.That(convertedNumber).IsEqualTo("V");
+        }
+
+        [Fact]
+        public void return_VI_when_the_arabic_number_is_6()
+        {
+            int arabicNumeral = 6;
+            RomanNumeral romanNumeral = new RomanNumeral();
+
+            string convertedNumber = romanNumeral.ConvertFrom(arabicNumeral);
+
+            Check.That(convertedNumber).IsEqualTo("VI");
+        }
     }
 }
