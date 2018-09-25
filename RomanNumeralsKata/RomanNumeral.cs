@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace RomanNumeralsKata
 
@@ -9,34 +10,39 @@ namespace RomanNumeralsKata
 
         public string ConvertFrom(int arabicNumeral)
         {
-            if (arabicNumeral == 4)
+            if (arabicNumeral > 3)
             {
-                return "IV";
-            }
-
-            if (arabicNumeral == 5)
-            {
-                return "V";
-            }
-            if (arabicNumeral == 6)
-            {
-                return "VI";
+                return ConvertArabicNumber(arabicNumeral);
             }
 
             return MultiplyByArabicNumber(arabicNumeral);
             
         }
+
+        private string ConvertArabicNumber(int arabicNumber)
+        {
+            if (arabicNumber == 4)
+            {
+                return "IV";
+            }
+            int nbOneSymbolToAdd = arabicNumber - 5;
+
+            return  "V" + MultiplyByArabicNumber(nbOneSymbolToAdd);
+            
+        }
+
         public string MultiplyByArabicNumber(int arabicNumber)
         {
             string convertedRomanNumeral="";
             
-            for (int nb = 1; nb <= arabicNumber; nb++)
+            for (int iteratorIndex = 1; iteratorIndex <= arabicNumber; iteratorIndex++)
             {
                 convertedRomanNumeral += ROMAN_SYMBOL_FOR_1;
             
             }
+
             return convertedRomanNumeral;
-           
+
         }
     }
 }
