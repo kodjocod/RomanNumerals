@@ -9,9 +9,6 @@ namespace RomanNumeralsKata
 {
     public class RomanNumeral
     {
-        private const string ROMAN_SYMBOL_FOR_1 = "I";
-        private const string ROMAN_SYMBOL_FOR_5 = "V";
-
         private readonly Dictionary<int, string> MatchArabicAndRomanSymbols = new Dictionary<int, string>
         {
             {10,"X"},
@@ -22,6 +19,16 @@ namespace RomanNumeralsKata
 
         };
 
+        private readonly Dictionary<string, int> MatchRomanSymbolsWithArabicNumbers = new Dictionary<string, int>
+        {
+            {"L",50 },
+            {"XL",40 },
+            { "X", 10},
+            {"IX", 9},
+            {"V", 5},
+            {"IV", 4},
+            {"I", 1}
+        };
         public string ConvertToRomanNumerals(int arabicNumeral)
         {
             var convertedNumber = string.Empty;
@@ -39,57 +46,24 @@ namespace RomanNumeralsKata
             return convertedNumber;
         }
 
-        public  int ConvertToArabicNumber(string romanSymbol)
+        public int ConvertToArabicNumber(string romanSymbol)
         {
             int convertedNumber = 0;
+
             while (romanSymbol.Length != 0)
             {
-                var positionOfRomanSymbolToDelete = 0;
+                foreach (var romanNumeral in MatchRomanSymbolsWithArabicNumbers.Keys)
+                {
+                    if (romanSymbol.Contains(romanNumeral))
+                    {
+                        convertedNumber += MatchRomanSymbolsWithArabicNumbers[romanNumeral];
+                        var posRomanSymbolToDelete = romanSymbol.IndexOf(romanNumeral);
+                        romanSymbol = romanSymbol.Remove(posRomanSymbolToDelete,romanNumeral.Length);
+                    }
 
-                if (romanSymbol.Contains("X"))
-                {
-                    convertedNumber += 10;
-                    positionOfRomanSymbolToDelete = romanSymbol.IndexOf("X");
-                    romanSymbol = romanSymbol.Remove(positionOfRomanSymbolToDelete, 1);
-                }
-                if (romanSymbol.Contains("IV"))
-                {
-                    convertedNumber += 4;
-                    positionOfRomanSymbolToDelete = romanSymbol.IndexOf("IV");
-                    romanSymbol = romanSymbol.Remove(positionOfRomanSymbolToDelete, 2);
-                }
-                if (romanSymbol.Contains("V"))
-                {
-                    convertedNumber += 5;
-                    positionOfRomanSymbolToDelete = romanSymbol.IndexOf("V");
-                    romanSymbol= romanSymbol.Remove(positionOfRomanSymbolToDelete,1);
-                }
-
-
-                if (romanSymbol.Contains("I"))
-                {
-                    convertedNumber += 1;
-                    positionOfRomanSymbolToDelete = romanSymbol.IndexOf("I");
-                    romanSymbol = romanSymbol.Remove(positionOfRomanSymbolToDelete, 1);
                 }
             }
-
             return convertedNumber;
-            //if (romanSymbol == "IV")
-            //{
-            //    return 4;
-            //}
-            //if (romanSymbol == "I")
-            //{
-            //    return 1;
-            //}
-
-            //if (romanSymbol == "III")
-            //{
-            //    return 3;
-            //}
-
-            //return 0;
         }
     }
 }
