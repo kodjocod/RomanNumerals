@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace RomanNumeralsKata
@@ -6,20 +7,63 @@ namespace RomanNumeralsKata
 {
     public class RomanNumeral
     {
-        private const string ROMAN_SYMBOL_FOR_1= "I";
+        private const string ROMAN_SYMBOL_FOR_1 = "I";
+        private const string ROMAN_SYMBOL_FOR_5 = "V";
 
-        public string ConvertFrom(int arabicNumeral)
+        private readonly Dictionary<int, string> MatchArabicAndRomanSymbols = new Dictionary<int, string>
         {
-            if (arabicNumeral > 3)
+            {10,"X"},
+            {9,"IX" },
+            {5,"V"},
+            {4,"IV"},
+            {1, "I"}
+
+        };
+
+        public string ConvertToRomanNumerals(int arabicNumeral)
+        {
+            var convertedNumber = string.Empty;
+
+            foreach (var arabicNumber in MatchArabicAndRomanSymbols.Keys)
             {
-                return ConvertArabicNumber(arabicNumeral);
+                while (arabicNumeral >= arabicNumber)
+                {
+                    convertedNumber += MatchArabicAndRomanSymbols[arabicNumber];
+                    arabicNumeral -= arabicNumber;
+                }
+
             }
 
-            return MultiplyByArabicNumber(arabicNumeral);
-            
+            return convertedNumber;
+        }
+        //if (arabicNumeral > 3 && arabicNumeral < 9)
+        //    {
+
+        //        return ConvertArabicNumberFrom4To8(arabicNumeral);
+        //    }
+
+        //    if (arabicNumeral >= 9)
+        //    {
+        //        return ConvertArabicNumberFrom9toInfinit(arabicNumeral);
+        //    }
+
+        //    return MultiplyByArabicNumber(arabicNumeral);
+
+        //}
+
+        private string ConvertArabicNumberFrom9toInfinit(int arabicNumeral)
+        {
+            if (arabicNumeral == 9)
+            {
+                return "IX";
+            }
+
+            int nbOneSymbolToAdd = arabicNumeral - 10;
+
+            return "X" + MultiplyByArabicNumber(nbOneSymbolToAdd);
         }
 
-        private string ConvertArabicNumber(int arabicNumber)
+        private string ConvertArabicNumberFrom4To8(int arabicNumber)
         {
             if (arabicNumber == 4)
             {
@@ -27,18 +71,18 @@ namespace RomanNumeralsKata
             }
             int nbOneSymbolToAdd = arabicNumber - 5;
 
-            return  "V" + MultiplyByArabicNumber(nbOneSymbolToAdd);
-            
+            return ROMAN_SYMBOL_FOR_5 + MultiplyByArabicNumber(nbOneSymbolToAdd);
+
         }
 
         public string MultiplyByArabicNumber(int arabicNumber)
         {
-            string convertedRomanNumeral="";
-            
+            string convertedRomanNumeral = "";
+
             for (int iteratorIndex = 1; iteratorIndex <= arabicNumber; iteratorIndex++)
             {
                 convertedRomanNumeral += ROMAN_SYMBOL_FOR_1;
-            
+
             }
 
             return convertedRomanNumeral;
