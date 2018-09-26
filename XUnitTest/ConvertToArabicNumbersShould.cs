@@ -72,5 +72,25 @@ namespace RomanNumeralKataUnitTest
             Check.That(convertedNumber).IsEqualTo(43);
         }
 
+        [Fact]
+        public void roiezor()
+        {
+            string romanSymbol = "IX";
+            RomanNumeral romanNumeral = new RomanNumeral();
+            bool answerBeSubtracted = romanNumeral.CanBeSubtracted(romanSymbol);
+
+            Check.That(answerBeSubtracted).IsEqualTo(true);
+        }
+        [Fact]
+        public void name()
+        {
+            string romanSymbol = "IX";
+            RomanNumeral romanNumeral = new RomanNumeral();
+
+            int convertedNumber = romanNumeral.ConvertToArabicNumber(romanSymbol);
+
+            Check.That(convertedNumber).IsEqualTo(9);
+        }
+
     }
 }
