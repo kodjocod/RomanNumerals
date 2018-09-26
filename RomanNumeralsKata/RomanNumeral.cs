@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace RomanNumeralsKata
 
@@ -36,57 +37,14 @@ namespace RomanNumeralsKata
 
             return convertedNumber;
         }
-        //if (arabicNumeral > 3 && arabicNumeral < 9)
-        //    {
 
-        //        return ConvertArabicNumberFrom4To8(arabicNumeral);
-        //    }
-
-        //    if (arabicNumeral >= 9)
-        //    {
-        //        return ConvertArabicNumberFrom9toInfinit(arabicNumeral);
-        //    }
-
-        //    return MultiplyByArabicNumber(arabicNumeral);
-
-        //}
-
-        private string ConvertArabicNumberFrom9toInfinit(int arabicNumeral)
+        public  int ConvertToArabicNumber(string romanSymbol)
         {
-            if (arabicNumeral == 9)
+            if (romanSymbol == "I")
             {
-                return "IX";
+                return 1;
             }
-
-            int nbOneSymbolToAdd = arabicNumeral - 10;
-
-            return "X" + MultiplyByArabicNumber(nbOneSymbolToAdd);
-        }
-
-        private string ConvertArabicNumberFrom4To8(int arabicNumber)
-        {
-            if (arabicNumber == 4)
-            {
-                return "IV";
-            }
-            int nbOneSymbolToAdd = arabicNumber - 5;
-
-            return ROMAN_SYMBOL_FOR_5 + MultiplyByArabicNumber(nbOneSymbolToAdd);
-
-        }
-
-        public string MultiplyByArabicNumber(int arabicNumber)
-        {
-            string convertedRomanNumeral = "";
-
-            for (int iteratorIndex = 1; iteratorIndex <= arabicNumber; iteratorIndex++)
-            {
-                convertedRomanNumeral += ROMAN_SYMBOL_FOR_1;
-
-            }
-
-            return convertedRomanNumeral;
-
+            return 0;
         }
     }
 }
