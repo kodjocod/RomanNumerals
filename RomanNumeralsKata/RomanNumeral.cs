@@ -46,6 +46,12 @@ namespace RomanNumeralsKata
             {
                 var positionOfRomanSymbolToDelete = 0;
 
+                if (romanSymbol.Contains("X"))
+                {
+                    convertedNumber += 10;
+                    positionOfRomanSymbolToDelete = romanSymbol.IndexOf("X");
+                    romanSymbol = romanSymbol.Remove(positionOfRomanSymbolToDelete, 1);
+                }
                 if (romanSymbol.Contains("IV"))
                 {
                     convertedNumber += 4;
