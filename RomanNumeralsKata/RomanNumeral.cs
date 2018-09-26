@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -40,11 +41,49 @@ namespace RomanNumeralsKata
 
         public  int ConvertToArabicNumber(string romanSymbol)
         {
-            if (romanSymbol == "I")
+            int convertedNumber = 0;
+            while (romanSymbol.Length != 0)
             {
-                return 1;
+                var positionOfRomanSymbolToDelete = 0;
+
+                if (romanSymbol.Contains("IV"))
+                {
+                    convertedNumber += 4;
+                    positionOfRomanSymbolToDelete = romanSymbol.IndexOf("IV");
+                    romanSymbol = romanSymbol.Remove(positionOfRomanSymbolToDelete, 2);
+                }
+                if (romanSymbol.Contains("V"))
+                {
+                    convertedNumber += 5;
+                    positionOfRomanSymbolToDelete = romanSymbol.IndexOf("V");
+                    romanSymbol= romanSymbol.Remove(positionOfRomanSymbolToDelete,1);
+                }
+
+
+                if (romanSymbol.Contains("I"))
+                {
+                    convertedNumber += 1;
+                    positionOfRomanSymbolToDelete = romanSymbol.IndexOf("I");
+                    romanSymbol = romanSymbol.Remove(positionOfRomanSymbolToDelete, 1);
+                }
             }
-            return 0;
+
+            return convertedNumber;
+            //if (romanSymbol == "IV")
+            //{
+            //    return 4;
+            //}
+            //if (romanSymbol == "I")
+            //{
+            //    return 1;
+            //}
+
+            //if (romanSymbol == "III")
+            //{
+            //    return 3;
+            //}
+
+            //return 0;
         }
     }
 }
