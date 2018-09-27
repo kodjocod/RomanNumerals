@@ -1,10 +1,11 @@
+using System.Linq;
 using NFluent;
 using RomanNumeralsKata;
 using Xunit;
 
 namespace RomanNumeralKataUnitTest
 {
-    public class ConvertFromShould
+    public class ConvertToRomanNumeralsShould
     {
         [Fact]
         public void return_I_when_the_arabic_number_is_1()
@@ -109,4 +110,6 @@ namespace RomanNumeralKataUnitTest
             Check.That(convertedNumber).IsEqualTo("XXIV");
         }
     }
+
+
 }

@@ -73,16 +73,7 @@ namespace RomanNumeralKataUnitTest
         }
 
         [Fact]
-        public void roiezor()
-        {
-            string romanSymbol = "IX";
-            RomanNumeral romanNumeral = new RomanNumeral();
-            bool answerBeSubtracted = romanNumeral.CanBeSubtracted(romanSymbol);
-
-            Check.That(answerBeSubtracted).IsEqualTo(true);
-        }
-        [Fact]
-        public void name()
+        public void return_9_when_given_roman_symbol_is_IX()
         {
             string romanSymbol = "IX";
             RomanNumeral romanNumeral = new RomanNumeral();
@@ -91,6 +82,9 @@ namespace RomanNumeralKataUnitTest
 
             Check.That(convertedNumber).IsEqualTo(9);
         }
+
+
+
 
     }
 }

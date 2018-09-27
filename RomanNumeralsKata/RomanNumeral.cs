@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 
 namespace RomanNumeralsKata
@@ -9,6 +10,8 @@ namespace RomanNumeralsKata
 {
     public class RomanNumeral
     {
+        private const int NB_ROMAN_SYMBOL_TO_DELETE = 2;
+        private const int STARTING_POSITION_OF_ROMAN_SYMBOL = 0;
         private readonly Dictionary<int, string> FromArabicToRoman = new Dictionary<int, string>
         {
             {10,"X"},
@@ -22,9 +25,9 @@ namespace RomanNumeralsKata
         private readonly Dictionary<string, int> FromRomanToArabic = new Dictionary<string, int>
         {
      
-            { "L",50 },
+            {"L",50 },
             {"XL",40 },
-            { "X", 10},
+            {"X", 10},
             {"IX", 9},
             {"V", 5},
             {"IV", 4},
@@ -50,7 +53,6 @@ namespace RomanNumeralsKata
         public int ConvertToArabicNumber(string romanSymbol)
         {
             int convertedNumber = 0;
-            int posRomanSymbolToDelete = 0;
 
             while (romanSymbol.Length != 0)
             {
@@ -58,21 +60,18 @@ namespace RomanNumeralsKata
                 {
                     if(romanSymbol.Contains(romanNumeral))
                     {
-                        if (CanBeSubtracted(romanSymbol))
+                        if (IsSubtractableBy(romanSymbol))
                         {
                             var singleRomanSymbols = romanSymbol.ToCharArray().Select(character => character.ToString()).ToArray();
                             convertedNumber += FromRomanToArabic[singleRomanSymbols[1]] - FromRomanToArabic[singleRomanSymbols[0]];
-                            romanSymbol = romanSymbol.Remove(posRomanSymbolToDelete, 2);
-
+                            romanSymbol= RemoveRomanNumeralsFrom(romanSymbol,romanNumeral,STARTING_POSITION_OF_ROMAN_SYMBOL,NB_ROMAN_SYMBOL_TO_DELETE)
                         }
                         else
                         {
                             convertedNumber += FromRomanToArabic[romanNumeral];
-                            posRomanSymbolToDelete = romanSymbol.IndexOf(romanNumeral, StringComparison.Ordinal);
-                            romanSymbol = romanSymbol.Remove(posRomanSymbolToDelete, romanNumeral.Length);
+                            var posRomanSymbolToDelete = romanSymbol.IndexOf(romanNumeral, StringComparison.Ordinal);
+                            romanSymbol= RemoveRomanNumeralsFrom(romanSymbol,romanNumeral,posRomanSymbolToDelete,romanNumeral.Length)
                         }
-          
-                       
                     }
 
                 }
@@ -80,11 +79,18 @@ namespace RomanNumeralsKata
             return convertedNumber;
         }
 
-        public bool CanBeSubtracted(string romanSymbol)
+        public string RemoveRomanNumeralsFrom(string romanSymbol,string romanNumeral,int startPosition,int nbSymbolsToDelete)
+        {
+            var posRomanSymbolToDelete = romanSymbol.IndexOf(romanNumeral, StringComparison.Ordinal);
+            return romanSymbol.Remove(posRomanSymbolToDelete,romanSymbol.Length);
+        }
+
+        public bool IsSubtractableBy(string romanSymbol)
         {
             if (romanSymbol.Length > 1)
             {
                 var singleRomanSymbols = romanSymbol.ToCharArray().Select(character => character.ToString()).ToArray();
+
                 if (FromRomanToArabic[singleRomanSymbols[0]] <
                     FromRomanToArabic[singleRomanSymbols[1]])
                 {
