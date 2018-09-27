@@ -71,7 +71,6 @@ namespace RomanNumeralKataUnitTest
 
             Check.That(convertedNumber).IsEqualTo(43);
         }
-
         [Fact]
         public void return_9_when_given_roman_symbol_is_IX()
         {
@@ -82,9 +81,6 @@ namespace RomanNumeralKataUnitTest
 
             Check.That(convertedNumber).IsEqualTo(9);
         }
-
-
-
 
     }
 }
